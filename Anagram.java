@@ -15,7 +15,7 @@ public class Anagram {
         Arrays.sort(tt);
        return String.valueOf(ss).equals(String.valueOf(tt));
     }
-
+//optimal solution
     public boolean isAnagramV2(String s, String t){
         //length check early exit
         if(s.length() !=t.length())
