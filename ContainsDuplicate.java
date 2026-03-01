@@ -1,11 +1,12 @@
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class ContainsDuplicate {
 
     public static void main(String args[]){
-        int[] nums = {1,2,3,4,4};
+        int[] nums = {1,2,3,4,5};
         ContainsDuplicate cd = new ContainsDuplicate();
-        var val =cd.hasDuplicate2(nums);
+        var val =cd.hasDuplicate3(nums);
         System.out.println(val);
 
     }
@@ -34,6 +35,10 @@ public class ContainsDuplicate {
             seen.add(num);
         }
         return false;
+    }
+
+    public boolean hasDuplicate3(int[] nums) {
+        return Arrays.stream(nums).distinct().count() <nums.length;
     }
     
 }
